@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    touch-action: manipulation;
+}
+
+#game-container {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: 0 auto;
+}
+
+/* Shop Styles */
+#shop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 300px;
+    display: none;
+    z-index: 1000;
+}
+
+#shop h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.color-btn {
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+}
+
+.color-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.selected {
+    border-color: #2ecc71 !important;
+    box-shadow: 0 0 15px #2ecc71;
+}
+
+.shop-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+/* HUD Styles */
+.hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.score {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.coins {
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.high-score {
+    color: #2ecc71;
+    font-size: 18px;
+}
+
+/* Touch Controls */
+.touch-controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: none; /* Za desktop sakrij */
+}
